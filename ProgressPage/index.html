@@ -1,0 +1,512 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Progress Page</title>
+
+    <style>
+        body {
+            background-color: #F0F3FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 16px;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .maintext {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4D4F54;
+        }
+
+        .terms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .footer {
+            background: #4D4F54;
+            border-radius: 0px 0px 8px 8px;
+            padding: 23.5px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 20px;
+
+
+        }
+
+        .readings-cont {
+            width: 550px;
+            height: 395px;
+            border-radius: 8px;
+            background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F5F7F9;
+            box-shadow: 0px 0px 20px rgba(18, 95, 138, 0.1);
+        }
+
+        .vitals-cont {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .blood-pressure-cont {
+            /* height: 290px; */
+            width: 550px;
+            border: 2px solid #E3E3E3;
+            border-radius: 9px;
+        }
+
+        .vitals-header {
+            background: linear-gradient(0deg, #F5F7F9, #F5F7F9);
+            border-radius: 7px 8px 0px 0px;
+            font-size: 28px;
+            font-weight: 700;
+            color: black;
+            padding: 22px;
+        }
+
+        .vitals-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .vital-subtext {
+            font-size: 24px;
+            font-weight: 700;
+            color: #232222;
+        }
+
+        .btn-style {
+            background: #577CE5;
+            border: 1px solid #577CE5;
+            border-radius: 9px;
+            height: 102px;
+            width: 218px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .btn-bmi {
+            background: #577CE5;
+            border: 1px solid #577CE5;
+            border-radius: 9px;
+            height: 132px;
+            width: 218px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 16px;
+        }
+
+        .accomplish-cont {
+            background: linear-gradient(0deg, #F0F3FF, #F0F3FF);
+            border: 2px solid #E3E3E3;
+            border-radius: 9px;
+            width: 550px;
+            height: 322px;
+        }
+
+        .btn {
+            cursor: pointer;
+            border: 1px solid #577CE5;
+            background-color: #577CE5;
+            height: 60px;
+            width: 502px;
+            color: white;
+            font-size: 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 24px;
+        }
+
+        .btn:hover {
+            color: white;
+        }
+
+        .tiles-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tiles-btn {
+            cursor: pointer;
+            border: 1px solid #577CE5;
+            background-color: transparent;
+            height: 50px;
+            width: 263px;
+            color: #577CE5;
+            font-size: 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 24px;
+        }
+
+        .tiles-main {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-top: 24px;
+
+        }
+
+        .tiles-secondary {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-top: 24px;
+        }
+
+        .image-container {
+            width: 263px;
+            height: 320px;
+            background-color: #EEEEEE;
+        }
+
+        .last-cont {
+            margin-top: 53px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .last-cont-img {
+            height: 399px;
+            width: 45%;
+            background-color: #EEEEEE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media (max-width:480px) {
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .tiles-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .tiles-main {
+                width: 100%;
+                margin-top: 15px;
+            }
+
+            .tiles-secondary {
+                width: 100%;
+            }
+
+            .image-container {
+                width: 100%;
+            }
+
+            .tiles-btn {
+                width: 100%;
+            }
+
+            .last-cont {
+                display: none;
+            }
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 630px;">
+        <div style="height:3992px;background-color: white;">
+            <nav class="navbar navbar-light bg-light"
+                style="background-color: #ffffff !important;border-bottom: 1px solid rgba(0,0,0,0.2);padding: 20px;">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/LupinLogo.svg" alt="">
+                    </a>
+                </div>
+            </nav>
+            <div style="padding:23px 40px;">
+                <div style="margin: 30px 0;">
+                    <h1 style="font-weight: 700;text-align: center;">Your Monthly Progress!</h1>
+                    <div style="margin-top: 24px;font-size: 24px;">Hi Juhi! This is a cumulative summary on how you have
+                        fared this January.</div>
+                </div>
+
+                <div class="readings-cont">
+                    <div style="font-size: 28px;font-weight: 700;color: #232222;text-align: center;padding: 24px 60px;">
+                        Are you sticking to you routine?</div>
+                    <div style="display: flex;flex-direction:column;padding: 24px 50px;">
+                        <div style="display: flex;justify-content: space-between;align-items: center;">
+                            <div style="display: flex;flex-direction: column;align-items: center;">
+                                <div><img src="../assets/pro-readings.svg" alt="" /></div>
+                                <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;margin-top: 20px;">70%</div>
+                                <div style="font-size: 24px;font-weight: 400;color: #0D0D0D;">Readings</div>
+                            </div>
+                            <div style="display: flex;flex-direction: column;align-items: center;">
+                                <div><img src="../assets/pro-health.svg" alt="" /></div>
+                                <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;margin-top: 20px;">66%</div>
+                                <div style="font-size: 24px;font-weight: 400;color: #0D0D0D;">Health</div>
+                            </div>
+                            <div style="display: flex;flex-direction: column;align-items: center;">
+                                <div><img src="../assets/pro-calendar.svg" alt="" /></div>
+                                <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;margin-top: 20px;">90%</div>
+                                <div style="font-size: 24px;font-weight: 400;color: #0D0D0D;">Calender</div>
+                            </div>
+                        </div>
+                        <div style="display:flex">
+                            <button class="btn">Buy Now</button>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction: column;">
+                        <div
+                            style="font-size: 36px;font-weight: 700;color: #0D0D0D;text-align: center;border-top: 0.932927px solid rgba(0,0,0,0.2);padding: 10px 20px;margin-top: 40px;">
+                            Your Vitals
+                        </div>
+                        <div class="vitals-cont">
+                            <div class="blood-pressure-cont">
+                                <div class="vitals-header">Blood Pressure</div>
+                                <div class="vitals-body">
+                                    <div class="vital-subtext">You have improved from last time</div>
+                                    <div
+                                        style="display: flex;justify-content: space-between;margin-top: 20px;align-items: center;">
+                                        <div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">Out of</div>
+                                            <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;">20/30 days
+                                            </div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">logged</div>
+                                        </div>
+                                        <div class="btn-style">
+                                            <div style="font-size:40px;font-weight:700;color:white">90%</div>
+                                            <div style="font-size:20px;font-weight:400;color:white">within normal range
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="blood-pressure-cont" style="margin-top: 24px;">
+                                <div class="vitals-header">Heart Rate</div>
+
+                                <div class="vitals-body">
+
+                                    <div class="vital-subtext">You are almost there</div>
+                                    <div
+                                        style="display: flex;justify-content: space-between;margin-top: 20px;align-items: center;">
+                                        <div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">Out of</div>
+                                            <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;">20/30 days
+                                            </div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">logged</div>
+                                        </div>
+                                        <div class="btn-style">
+                                            <div style="font-size:40px;font-weight:700;color:white">90%</div>
+                                            <div style="font-size:20px;font-weight:400;color:white">within normal range
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blood-pressure-cont" style="margin-top: 24px;">
+                                <div class="vitals-header">Blood Oxygen (SPO2)</div>
+
+                                <div class="vitals-body">
+
+                                    <div class="vital-subtext">Keep up the good work</div>
+                                    <div
+                                        style="display: flex;justify-content: space-between;margin-top: 20px;align-items: center;">
+                                        <div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">Out of</div>
+                                            <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;">20/30 days
+                                            </div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">logged</div>
+                                        </div>
+                                        <div class="btn-style">
+                                            <div style="font-size:40px;font-weight:700;color:white">90%</div>
+                                            <div style="font-size:20px;font-weight:400;color:white">within normal range
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blood-pressure-cont" style="margin-top: 24px;">
+                                <div class="vitals-header">BMI</div>
+
+                                <div class="vitals-body">
+
+                                    <div class="vital-subtext">You are getting there,some more to go!</div>
+                                    <div
+                                        style="display: flex;justify-content: space-between;margin-top: 20px;align-items: center;">
+                                        <div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">Out of</div>
+                                            <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;">20/30 days
+                                            </div>
+                                            <div style="font-size: 20px;font-weight: 400;color: #0D0D0D;">logged</div>
+                                        </div>
+                                        <div class="btn-bmi">
+                                            <div style="font-size: 20px;font-weight: 400;color:white">Last Reading
+                                            </div>
+                                            <div style="font-size:40px;font-weight:700;color:white">28.1<span
+                                                    style="font-size: 20px;">kg/m2</span></div>
+                                            <div style="font-size:20px;font-weight:400;color:white">80kg | Overweight
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="display: flex;flex-direction: column;">
+                        <div
+                            style="font-size: 36px;font-weight: 700;color: #0D0D0D;text-align: center;border-top: 0.932927px solid rgba(0,0,0,0.2);padding: 10px 20px;margin-top: 40px;">
+                            Your Accomplishments
+                        </div>
+                        <div class="accomplish-cont">
+                            <div
+                                style="border-bottom: 0.932927px solid rgba(0,0,0,0.2);text-align: center;font-size: 28px;font-weight: 700;padding: 20px;">
+                                You did it!
+                            </div>
+                            <div
+                                style="display: flex;justify-content: space-evenly;align-items: center;margin-top: 32px;">
+                                <div
+                                    style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                                    <img src="../assets/pro-readings.svg" alt="" width="48px" height="48px" />
+                                    <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;">80%</div>
+                                    <div style="font-size: 24px;font-weight: 700;color: #0D0D0D;">BP</div>
+                                    <div style="font-size: 24px;font-weight:normal;color: #0D0D0D;">improvement</div>
+                                </div>
+                                <div
+                                    style="display: flex;flex-direction: column;justify-content: center;align-items: center;">
+                                    <img src="../assets/pro-readings.svg" alt="" width="48px" height="48px" />
+                                    <div style="font-size: 40px;font-weight: 700;color: #0D0D0D;">80%</div>
+                                    <div style="font-size: 24px;font-weight: 700;color: #0D0D0D;">BP</div>
+                                    <div style="font-size: 24px;font-weight: normal;color: #0D0D0D;">improvement</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div style="display: flex;flex-direction: column;">
+                        <div
+                            style="font-size: 36px;font-weight: 700;color: #0D0D0D;text-align: center;border-top: 0.932927px solid rgba(0,0,0,0.2);padding: 10px 20px;margin-top: 40px;">
+                            Upcoming this month
+                        </div>
+
+                        <div class="tiles-container">
+                            <div class="tiles-main">
+                                <div class="image-container">
+                                </div>
+                                <div style="font-size: 28px;font-weight: 700;color: #0D0D0D;margin-top: 24px;">
+                                    Title
+                                </div>
+                                <div
+                                    style="font-size: 24px;font-weight: 400;color: #0D0D0D;margin-top: 16px;word-break: break-word;width: 85%;">
+                                    There appears to be a new login of your account from another system There
+                                    appears to be a
+                                    new login of your account from another system
+                                </div>
+                                <div>
+                                    <button class="tiles-btn">See More</button>
+                                </div>
+                            </div>
+                            <div class="tiles-main">
+                                <div class="image-container">
+                                </div>
+                                <div style="font-size: 28px;font-weight: 700;color: #0D0D0D;margin-top: 24px;">
+                                    Title
+                                </div>
+                                <div
+                                    style="font-size: 24px;font-weight: 400;color: #0D0D0D;margin-top: 16px;word-break: break-word;width: 85%;">
+                                    There appears to be a new login of your account from another system There
+                                    appears to be a
+                                    new login of your account from another system
+                                </div>
+                                <div>
+                                    <button class="tiles-btn">See More</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="last-cont">
+                            <div class="last-cont-img"></div>
+                            <div
+                                style="display: flex;flex-direction: column;align-items: flex-start;position: relative;width: 50%;">
+                                <div style="font-size: 36px;font-weight: 700;color: #0D0D0D;">Showcase of<br> the day
+                                </div>
+                                <div style="font-size: 24px;font-weight: 400;color: #0D0D0D;word-break:break-word">The
+                                    14 day
+                                    trial for your
+                                    account
+                                    has just ended. To continue with the service, please fill
+                                    in your billing information.</div>
+                                <span style=" color: #577CE5;position: absolute; right: 0; bottom: 0;font-size:
+                                    24px;font-weight: 400;">See more</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="footer">
+            <div style=" background: #4D4F54;display: flex;justify-content: flex-start;align-items:center;height:100%;">
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/fb.svg" alt="" style="position: absolute;top: 12px;left:20px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/insta.svg" alt=""
+                            style="position: absolute;top: 12px;left:14px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/twit.svg" alt=""
+                            style="position: absolute;top: 12px;left:15px" /></a>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex;justify-content: space-around;">
+                    <a href="#"><img src="../assets/appstore.png" alt="" /></a>
+                    <a href="#"><img src="../assets/playstore.png" alt="" style="margin-left: 10px;" /></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="terms">
+        <div><a href="#">Unsubscribe from this
+                list</a><span style="border-right: 1px solid black;margin: 0 5px;opacity: 0.4;height: 5px;"></span><a
+                href="#">Help</a></div>
+        <div style="margin-top: 10px;text-align: center;"><span>You are receiving this email because you have a
+                Lupin
+                Young
+                account.</span></div>
+        <div style="margin-top: 10px;text-align: center;"><span>This email was intended for Juhi Gupta. <a
+                    href="#">Learn why we included
+                    this.</a></span></div>
+    </div>
+
+</body>
+
+</html>

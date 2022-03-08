@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>PDF Report</title>
+
+    <style>
+        body {
+            background-color: #DCDCDC;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 16px;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            height: 842px;
+            width: 595px;
+            background-color: #FFFFFF;
+            padding: 84px 72px;
+        }
+
+        .header {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+            padding: 5px;
+        }
+
+        .report {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 26px;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 12px;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .report-cont {
+            height: 293px;
+            width: 427px;
+            border: 1px solid #E3E3E3;
+            border-radius: 9px;
+            margin-bottom: 16px;
+            padding: 20px;
+        }
+
+        .bp-cont {
+            height: 291px;
+            width: 427px;
+            border: 1px solid #E3E3E3;
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            padding: 13px 20px;
+        }
+
+        .bp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .heading {
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        thead {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+        }
+
+        th,
+        td {
+            padding: 5px;
+            font-size: 12px;
+            color: #4D4F54;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="header">
+            <img src="../assets/LupinLogo.svg" alt="" />
+        </div>
+
+        <div class="report">
+            <div class="title">Report</div>
+            <div class="report-cont">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Lupin Young Report</th>
+                            <th>Juhi Gupta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="heading">Patient No:</td>
+                            <td>12345</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Surname</td>
+                            <td>Gupta</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">First Name</td>
+                            <td>Juhi</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Date of Birth</td>
+                            <td>10/10/1950</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Gender</td>
+                            <td>Female</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Referring Practitioner</td>
+                            <td>Dr.Reddy</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Date of Commencement</td>
+                            <td>01/06/21</td>
+                        </tr>
+                        <tr>
+                            <td class="heading">Date of Conclusion</td>
+                            <td>30/06/21</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="bp-cont">
+                <div class="bp-header">
+                    <div style="color: #577CE5;font-weight: 700;font-size: 16px;">Blood Pressure</div>
+                    <div style="font-weight: 400;font-size: 10px;">Daily</div>
+                </div>
+                <div class="bp-data"></div>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

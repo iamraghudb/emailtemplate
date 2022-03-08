@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Catalogue Page</title>
+
+    <style>
+        body {
+            background-color: #F0F3FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 16px;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .maintext {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4D4F54;
+        }
+
+        .terms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .footer {
+            background: #4D4F54;
+            border-radius: 0px 0px 8px 8px;
+            padding: 23.5px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 20px;
+
+
+        }
+
+        .hero {
+            position: relative;
+            height: 337px;
+            background-color: #EEEEEE;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .voucher {
+            font-size: 24px;
+            background-color: #577CE5;
+            width: 550px;
+            height: 60px;
+            color: white;
+            font-weight: 700;
+            text-align: center;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            letter-spacing: 2px;
+        }
+
+        .btn {
+            cursor: pointer;
+            border: 1px solid #577CE5;
+            background-color: #577CE5;
+            height: 60px;
+            width: 550px;
+            color: white;
+            font-size: 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 24px;
+        }
+
+        .btn:hover {
+            color: white;
+        }
+
+        .tiles-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 48px 40px;
+            flex-wrap: wrap;
+        }
+
+        .tiles-btn {
+            cursor: pointer;
+            border: 1px solid #577CE5;
+            background-color: transparent;
+            height: 50px;
+            width: 263px;
+            color: #577CE5;
+            font-size: 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 24px;
+        }
+
+        .tiles-main {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-top: 24px;
+
+        }
+
+        .tiles-secondary {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            margin-top: 24px;
+        }
+
+        .image-container {
+            width: 263px;
+            height: 320px;
+            background-color: #EEEEEE;
+        }
+
+        @media (max-width:480px) {
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .tiles-container {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .tiles-main {
+                width: 100%;
+            }
+
+            .tiles-secondary {
+                width: 100%;
+            }
+
+            .image-container {
+                width: 100%;
+            }
+
+            .tiles-btn {
+                width: 100%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 630px;">
+        <div style="background-color: white;">
+            <nav class="navbar navbar-light bg-light"
+                style="background-color: #ffffff !important;border-bottom: 1px solid rgba(0,0,0,0.2);padding: 20px;">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/LupinLogo.svg" alt="">
+                    </a>
+                </div>
+            </nav>
+            <div>
+                <div class="hero">
+                    <img src="../assets/imgicon.svg" alt="" style="position: absolute;top: 10;left: 10;" />
+                </div>
+
+                <div style="padding:52px 40px 48px 40px;display: flex;justify-content: space-between;">
+                    <div style="height:399px;width: 40%;background-color: #EEEEEE;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;"></div>
+                    <div
+                        style="display: flex;flex-direction: column;align-items: flex-start;position: relative;width: 52%;">
+                        <div style="font-size: 36px;font-weight: 700;color: #0D0D0D;">Showcase of<br> the day</div>
+                        <div style="font-size: 24px;font-weight: 400;color: #0D0D0D;word-break:break-word">The 14 day
+                            trial for your
+                            account
+                            has just ended. To continue with the service, please fill
+                            in your billing information.</div>
+                        <span style=" color: #577CE5;position: absolute; right: 0; bottom: 0;font-size:
+                            24px;font-weight: 400;">See more</span>
+                    </div>
+                </div>
+                <div style="padding: 0 40px;">
+                    <button class="btn">Buy Now</button>
+                </div>
+
+
+                <div class="tiles-container">
+                    <div class="tiles-main">
+                        <div class="image-container">
+                        </div>
+                        <div style="font-size: 28px;font-weight: 700;color: #0D0D0D;margin-top: 24px;">
+                            Title
+                        </div>
+                        <div
+                            style="font-size: 24px;font-weight: 400;color: #0D0D0D;margin-top: 16px;word-break: break-word;width: 85%;">
+                            There appears to be a new login of your account from another system There
+                            appears to be a
+                            new login of your account from another system
+                        </div>
+                        <div>
+                            <button class="tiles-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="tiles-main">
+                        <div class="image-container">
+                        </div>
+                        <div style="font-size: 28px;font-weight: 700;color: #0D0D0D;margin-top: 24px;">
+                            Title
+                        </div>
+                        <div
+                            style="font-size: 24px;font-weight: 400;color: #0D0D0D;margin-top: 16px;word-break: break-word;width: 85%;">
+                            There appears to be a new login of your account from another system There
+                            appears to be a
+                            new login of your account from another system
+                        </div>
+                        <div>
+                            <button class="tiles-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="tiles-secondary">
+                        <div class="image-container">
+                        </div>
+                        <div style="font-size: 28px;font-weight: 700;color: #0D0D0D;margin-top: 24px;">
+                            Title
+                        </div>
+                        <div
+                            style="font-size: 24px;font-weight: 400;color: #0D0D0D;margin-top: 16px;word-break: break-word;width: 85%;">
+                            There appears to be a new login of your account from another system There
+                            appears to be a
+                            new login of your account from another system
+                        </div>
+                        <div>
+                            <button class="tiles-btn">Buy Now</button>
+                        </div>
+                    </div>
+                    <div class="tiles-secondary">
+                        <div class="image-container">
+                        </div>
+                        <div style="font-size: 28px;font-weight: 700;color: #0D0D0D;margin-top: 24px;">
+                            Title
+                        </div>
+                        <div
+                            style="font-size: 24px;font-weight: 400;color: #0D0D0D;margin-top: 16px;word-break: break-word;width: 85%;">
+                            There appears to be a new login of your account from another system There
+                            appears to be a
+                            new login of your account from another system
+                        </div>
+                        <div>
+                            <button class="tiles-btn">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div style=" background: #4D4F54;display: flex;justify-content: flex-start;align-items:center;height:100%;">
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/fb.svg" alt="" style="position: absolute;top: 12px;left:20px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/insta.svg" alt=""
+                            style="position: absolute;top: 12px;left:14px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/twit.svg" alt=""
+                            style="position: absolute;top: 12px;left:15px" /></a>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex;justify-content: space-around;">
+                    <a href="#"><img src="../assets/appstore.png" alt="" /></a>
+                    <a href="#"><img src="../assets/playstore.png" alt="" style="margin-left: 10px;" /></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="terms">
+        <div><a href="#">Unsubscribe from this
+                list</a><span style="border-right: 1px solid black;margin: 0 5px;opacity: 0.4;height: 5px;"></span><a
+                href="#">Help</a></div>
+        <div style="margin-top: 10px;text-align: center;"><span>You are receiving this email because you have a
+                Lupin
+                Young
+                account.</span></div>
+        <div style="margin-top: 10px;text-align: center;"><span>This email was intended for Juhi Gupta. <a
+                    href="#">Learn why we included
+                    this.</a></span></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Order Confirm Page</title>
+
+    <style>
+        body {
+            background-color: #F0F3FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 16px;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .maintext {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4D4F54;
+        }
+
+        .terms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .footer {
+            background: #4D4F54;
+            border-radius: 0px 0px 8px 8px;
+            padding: 23.5px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 20px;
+
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .order-reciept {
+            width: 550px;
+            border: 2px solid #E3E3E3;
+            border-radius: 9px;
+        }
+
+        .cost {
+            width: 100%;
+            height: 420px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        .address {
+            width: 100%;
+            background-color: #F5F7F9;
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (max-width:480px) {
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 630px;">
+        <div style="background-color: white;">
+            <nav class="navbar navbar-light bg-light"
+                style="background-color: #ffffff !important;border-bottom: 1px solid rgba(0,0,0,0.2);padding: 20px;">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/LupinLogo.svg" alt="">
+                    </a>
+                </div>
+            </nav>
+            <div style="padding: 23.5px 40px;">
+                <div style="margin: 50px 0;">
+                    <h1 style="font-weight: 700;">Order Confirmed!</h1>
+                    <div style="margin-top: 24px;font-size: 24px;">We hereby confirm that we have received your order.
+                    </div>
+                </div>
+
+                <div class="order-reciept">
+                    <div class="cost">
+                        <div
+                            style="font-size: 28px;font-weight: 700;color: #577CE5;border-bottom: 1px solid rgba(0, 0, 0, 0.2);padding: 24px 0 16px 24px;">
+                            Order No: SMLSDVS6500</div>
+
+                        <div style="display: flex;flex-direction: column;padding: 24px;">
+                            <div
+                                style="display: flex;justify-content: space-between;align-items: center;border-bottom: 1px solid rgba(0, 0, 0, 0.2);padding: 0 0 20px 0;">
+                                <div style="height: 84px;width: 88px;background-color: #E5E5E5;border-radius: 9px;">
+                                </div>
+                                <div
+                                    style="font-size: 20px;font-weight: 700;color: #4D4F54;margin-right: 90px !important;">
+                                    Smart
+                                    Oximeter x 1</div>
+                                <div style="font-size: 20px;font-weight: 700;color: #4D4F54;">Rs 4000/-</div>
+                            </div>
+                            <div
+                                style="display: flex;flex-direction:column;justify-content: flex-end;align-items: flex-end;border-bottom: 1px solid rgba(0, 0, 0, 0.2);padding: 24px 0;">
+                                <div
+                                    style="font-size: 20px;font-weight: 700;color: #4D4F54;display: flex;justify-content: space-between;width: 50%;">
+                                    <span style="font-size: 20px;font-weight: 400;color: #4D4F54;">Subtotal</span>Rs
+                                    4000/-
+                                </div>
+                                <div
+                                    style="font-size: 20px;font-weight: 700;color: #4D4F54;display: flex;justify-content: space-between;width: 50%;">
+                                    <span style="font-size: 20px;font-weight: 400;color: #4D4F54;">Shipping</span>Rs
+                                    40/-
+                                </div>
+                            </div>
+                            <div style="display: flex;justify-content: flex-end;align-items: center;padding: 32px 0;">
+                                <div
+                                    style="font-size: 20px;font-weight: 700;color: #4D4F54;color: #577CE5;display: flex;justify-content: space-between;width: 50%;">
+                                    <span style="font-size: 20px;font-weight: 400;color: #4D4F54;">Total</span>Rs
+                                    4040/-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="address">
+                        <div style="font-size: 28px;font-weight: 700;color: #4D4F54;padding: 24px 0 14px 24px;">Customer
+                            Information
+                        </div>
+                        <div
+                            style="display: flex;justify-content:space-between;padding: 0 24px 30px 24px;border-bottom: 1px solid rgba(0, 0, 0, 0.2);">
+                            <div
+                                style="display: flex;flex-direction: column;border-right: 1px solid rgba(0, 0, 0, 0.2);width: 50%;">
+                                <div style="font-size: 24px;font-weight: 700;color: #4D4F54;">Shipping address</div>
+                                <div style="font-size: 18px;font-weight: 400;color: #4D4F54;margin-top: 22px;">L-506,
+                                    Lalbagh Society,<br>
+                                    near Indiragandhi Hospital,<br> Kalyannagar, Indore<br> 452001
+                                </div>
+                            </div>
+                            <div style="display: flex;flex-direction: column;">
+                                <div style="font-size: 24px;font-weight: 700;color: #4D4F54;">Billing address</div>
+                                <div style="font-size: 18px;font-weight: 400;color: #4D4F54;margin-top: 22px;">L-506,
+                                    Lalbagh Society,<br>
+                                    near Indiragandhi Hospital,<br> Kalyannagar, Indore<br> 452001
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="display: flex;justify-content: space-between;align-items: center;padding: 24px 50px 24px 24px;">
+                            <div
+                                style=" display: flex;flex-direction: column; border-right: 1px solid rgba(0, 0, 0, 0.2);width: 53%;">
+                                <div style="font-size: 24px;font-weight: 700;color: #4D4F54;">Shipping Method</div>
+                                <div style="font-size: 18px;font-weight: 400;color: #4D4F54;margin-top: 22px;">Courier
+                                    partner- FedEx
+                                </div>
+                            </div>
+                            <div style="display: flex;flex-direction: column;">
+                                <div style="font-size: 24px;font-weight: 700;color: #4D4F54;">Payment Method</div>
+                                <div style="font-size: 18px;font-weight: 400;color: #4D4F54;margin-top: 22px;">
+                                    NetBanking</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin: 50px 0;">
+                    <p class="maintext">If you have any questions, reply to this email or contact us at <a
+                            href="">service@lupinyoung.com.</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div style=" background: #4D4F54;display: flex;justify-content: flex-start;align-items:center;height:100%;">
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/fb.svg" alt="" style="position: absolute;top: 12px;left:20px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/insta.svg" alt=""
+                            style="position: absolute;top: 12px;left:14px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/twit.svg" alt=""
+                            style="position: absolute;top: 12px;left:15px" /></a>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex;justify-content: space-around;">
+                    <a href="#"><img src="../assets/appstore.png" alt="" /></a>
+                    <a href="#"><img src="../assets/playstore.png" alt="" style="margin-left: 10px;" /></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="terms">
+        <div><a href="#">Unsubscribe from this
+                list</a><span style="border-right: 1px solid black;margin: 0 5px;opacity: 0.4;height: 5px;"></span><a
+                href="#">Help</a></div>
+        <div style="margin-top: 10px;text-align: center;"><span>You are receiving this email because you have a Lupin
+                Young
+                account.</span></div>
+        <div style="margin-top: 10px;text-align: center;"><span>This email was intended for Juhi Gupta. <a
+                    href="#">Learn why we included
+                    this.</a></span></div>
+    </div>
+
+</body>
+
+</html>

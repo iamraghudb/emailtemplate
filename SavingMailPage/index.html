@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Save Email</title>
+
+    <style>
+        body {
+            background-color: #F0F3FF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 16px;
+            flex-wrap: wrap;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .maintext {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4D4F54;
+            margin: 16px 30px 0 0;
+            width: 50%;
+            border-right: 1px solid #E4E5EA;
+        }
+
+        .terms {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+
+        .btn {
+            cursor: pointer;
+            border: 1px solid #577CE5;
+            background-color: #577CE5;
+            height: 50px;
+            width: 250px;
+            color: white;
+            font-size: 24px;
+            border-radius: 8px;
+            font-weight: bold;
+            margin-top: 24px;
+        }
+
+        .btn:hover {
+            color: #577CE5;
+        }
+
+        .footer {
+            background: #4D4F54;
+            border-radius: 0px 0px 8px 8px;
+            padding: 23.5px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 13px 20px;
+        }
+
+        .personal-info {
+            width: 550px;
+            height: 306px;
+            border: 1px solid rgba(77, 79, 84, 0.2);
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            margin-top: 16px;
+            padding: 23px 24px;
+        }
+
+        .doctor-info {
+            width: 550px;
+            height: 267px;
+            border: 1px solid rgba(77, 79, 84, 0.2);
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            margin-top: 16px;
+            padding: 23px 24px;
+        }
+
+        .caregiver-info {
+            width: 550px;
+            height: 247px;
+            border: 1px solid rgba(77, 79, 84, 0.2);
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            margin-top: 16px;
+            padding: 23px 24px;
+
+        }
+
+        .caregiver {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4D4F54;
+            margin: 16px 30px 0 0;
+        }
+
+        .right-text {
+            font-size: 24px;
+            font-weight: 400;
+            color: #4D4F54;
+            margin: 16px 0 0 24px;
+            width: 50%;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .phone {
+            margin-top: 20px;
+        }
+
+
+        @media (max-width:480px) {
+            .footer {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .maintext {
+                font-size: 24px;
+                font-weight: 400;
+                color: #4D4F54;
+                margin: 16px 30px 0 0;
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                border-bottom: 1px solid #E4E5EA;
+                border-right: none;
+                padding: 8px 0;
+            }
+
+            .container {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .right-text {
+                font-size: 24px;
+                font-weight: 400;
+                color: #4D4F54;
+                margin: 16px 30px 0 0;
+                width: 100%;
+            }
+
+            .caregiver {
+                font-size: 24px;
+                font-weight: 400;
+                color: #4D4F54;
+                margin: 16px 30px 0 0;
+                display: flex;
+                align-items: flex-start;
+                width: 100%;
+                border-right: none;
+                padding: 8px 0;
+            }
+
+            .phone {
+                margin: 35px 0 0 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="width: 630px;">
+        <div style="height: 1356px;background-color: white;">
+            <nav class="navbar navbar-light bg-light"
+                style="background-color: #ffffff !important;border-bottom: 1px solid rgba(0,0,0,0.2);padding: 20px;">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="../assets/LupinLogo.svg" alt="">
+                    </a>
+                </div>
+            </nav>
+            <div style="padding: 23.5px 40px;">
+                <div style="margin: 50px 0;">
+                    <h1 style="font-weight: 700;">Save this email</h1>
+                    <div style="margin-top: 24px;font-size: 24px;">Juhi we are a super excited you joined today and
+                        created your Lupin Young account.</div>
+                </div>
+
+                <div style="display: flex;flex-direction: column;">
+                    <div style="font-size: 24px;font-weight:400">Here are your account details:</div>
+                    <div class="personal-info">
+                        <div style="display: flex;border-bottom: 1px solid #E4E5EA;">
+                            <img src="../assets/contact.svg" alt="" width="24px" height="24px" />
+                            <h6 style="font-size: 24px;font-weight: 700;margin-left: 11px;">Personal Info</h6>
+                        </div>
+                        <div class="container">
+                            <div class="maintext">
+                                <div>
+                                    <h6 style=" font-weight: 700;font-size: 24px;">Juhi Gupta</h6>
+                                    <span>Female</span><br><span>55
+                                        years</span><br>
+                                </div>
+                                <div class="phone">9678723451</div>
+                            </div>
+                            <div class="right-text">
+                                <p>L-506, Lalbagh Society, near Indiragandhi Hospital, Kalyannagar,
+                                    Indore 452001</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="doctor-info">
+                        <div style="display: flex;border-bottom: 1px solid #E4E5EA;">
+                            <img src="../assets/doctor.svg" alt="" width="24px" height="24px" />
+                            <h6 style="font-size: 24px;font-weight: 700;margin-left: 11px;">Primary Doctor Info</h6>
+                        </div>
+                        <div class="container">
+                            <div class="maintext">
+                                <div>
+                                    <h6 style=" font-weight: 700;font-size: 24px;">Dr.Reddy</h6>
+                                    <span>Park Hospital</span><br>
+                                </div>
+                                <div class="phone">9678723451</div>
+                            </div>
+                            <div class="right-text">
+                                <p>Phase- I, C-1, Sushant Lok Rd, Sector 43, MG Road, Indore 452002</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caregiver-info">
+                        <div style="display: flex;border-bottom: 1px solid #E4E5EA;">
+                            <img src="../assets/caregiver.svg" alt="" width="24px" height="24px" />
+                            <h6 style="font-size: 24px;font-weight: 700;margin-left: 11px;">Caregiver Info</h6>
+                        </div>
+                        <div class="container">
+                            <div class="caregiver">
+                                <div>
+                                    <h6 style=" font-weight: 700;font-size: 24px;">Richa Gupta</h6>
+                                    <span>Daughter</span><br>
+                                </div>
+                                <div class="phone">9678723451</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div style=" background: #4D4F54;display: flex;justify-content: flex-start;align-items:center;height:100%;">
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/fb.svg" alt="" style="position: absolute;top: 12px;left:20px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/insta.svg" alt=""
+                            style="position: absolute;top: 12px;left:14px" /></a>
+                </div>
+                <div
+                    style="border-radius: 50%;width: 52px;height: 52px;margin-right: 8px;background: #000;opacity: 0.4;position: relative;">
+                    <a href="#"><img src="../assets/twit.svg" alt=""
+                            style="position: absolute;top: 12px;left:15px" /></a>
+                </div>
+            </div>
+
+            <div>
+                <div style="display: flex;justify-content: space-around;">
+                    <a href="#"><img src="../assets/appstore.png" alt="" /></a>
+                    <a href="#"><img src="../assets/playstore.png" alt="" style="margin-left: 10px;" /></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="terms">
+        <div><a href="#">Unsubscribe from this
+                list</a><span style="border-right: 1px solid black;margin: 0 5px;opacity: 0.4;height: 5px;"></span><a
+                href="#">Help</a></div>
+        <div style="margin-top: 10px;text-align: center;"><span>You are receiving this email because you have a
+                Lupin
+                Young
+                account.</span></div>
+        <div style="margin-top: 10px;text-align: center;"><span>This email was intended for Juhi Gupta. <a
+                    href="#">Learn why we included
+                    this.</a></span></div>
+    </div>
+
+</body>
+
+</html>
